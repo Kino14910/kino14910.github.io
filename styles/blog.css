@@ -1,0 +1,123 @@
+/* 导入字体图标 */
+@import url(../symbols/outlined/index.css);
+@import url(../symbols/symbols.css);
+/*导入全局样式*/
+@import url(global.css);
+@import url(common.css);
+
+body {
+  background-image: url(../images/nekopara.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.container {
+  padding: 10vh 25vw;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 0;
+  }
+}
+
+/* main样式 */
+main {
+  border-radius: 3rem;
+  padding: 5vh 0;
+  background-image: linear-gradient(#222330ed, #222330ed);
+}
+
+section {
+  margin: 2vw;
+  background-color: #141520ed;
+  border-radius: 1vmin;
+  border-bottom: #333 3px double;
+  backdrop-filter: blur(5px);
+  padding: 3vmin;
+  display: grid;
+  grid-template:
+    'head name' 2vmax
+    'head time' 2vmax
+    'article article'
+    'comment comment'
+    'bottom bottom' /4vmax 1fr;
+  grid-gap: 0 1vmin;
+  /* transition: transform, box-shadow 0.5s; */
+  
+  & img {
+    display: block;
+    height: 4vmax;
+    width: 4vmax;
+    grid-area: head;
+  }
+  
+  &:hover {
+    outline: 4px solid var(--blue);
+    transform: scale(1.01);
+  }
+
+  & time {
+    grid-area: time;
+    color: gray;
+    font-size: 0.8rem;
+    align-self: stretch;
+  }
+  
+  & .bottom {
+    grid-area: bottom;
+    display: flex;
+    justify-content: end;
+    
+    & .bottom-item {
+      font-size: small;
+      margin-right: 1vw;
+
+      & span {
+        color: whitesmoke;
+        font-size: 22px;
+
+        &:hover {
+          color: skyblue;
+        }
+      }
+    }
+  }
+
+  & .comment {
+    grid-area: comment;
+    border: #00000022 solid 1px;
+    background-color: #00000011;
+    border-radius: 1vmin;
+  
+    & p {
+      display: block;
+      margin: 1vmin;
+    }
+  
+    & span {
+      display: inline-block;
+      margin: 0 5px;
+      color: #0088ffcc;
+      cursor: pointer;
+    }
+    
+  }
+
+  & article {
+    padding: 1vmin;
+    grid-area: article;
+    
+    & iframe {
+    margin-top: 2vh;
+    }
+  }
+  
+  & .nickname {
+    grid-area: name;
+    align-self: stretch;
+  }
+}
+

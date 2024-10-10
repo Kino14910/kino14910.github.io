@@ -1,0 +1,19 @@
+.box {
+    width: 600px;
+    height: 800px;
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    /*auto fills width of container, and centers content in it. Note that the margin is not used. */
+    background-image: repeating-linear-gradient(transparent 0px, transparent 29px, gray 30px);
+    background-clip: content-box;
+}
+
+.box2 {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: radial-gradient(at 60px 80px, white, #333);
+}

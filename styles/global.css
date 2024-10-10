@@ -1,0 +1,94 @@
+:root {
+  --blue: #b3eaff;
+  --pink: #ffd9e6;
+  --pink2: #f8e2f0;
+}
+
+/* 外部字体 */
+.symbols {
+  font-family: 'Material Symbols Outlined';
+  font-size: 1vmax;
+  color: white;
+  font-size: xx-large;
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 48;
+}
+
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+html {
+  font-size: 18px;
+}
+
+@media (max-width:800px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: 'Noto-Sans','Roboto','Montserrat', sans-serif;
+  background-color: #1b2838;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.img {
+  vertical-align: middle;
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+}
+
+/* 各种居中 */
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.fix-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-center {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.grid-center {
+  justify-content: center;
+  align-content: center;
+}
+
+/* 清除浮动 */
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,106 @@
+/* header样式 */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  background-color: #171d25;
+  color: white;
+  padding-right: 10vw;
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+
+    & :hover {
+      color: var(--blue);
+    }
+
+    & li {
+      margin-right: 6vmin;
+
+      & .active {
+        color: var(--pink2);
+      }
+
+      & a {
+        color: white;
+        padding: 1vmin;
+      }
+    }
+  }
+
+}
+
+.header-change {
+  display: none;
+  background-color: transparent;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+}
+
+/* footer样式 */
+footer {
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+@media (max-width:800px) {
+  header {
+    position: relative;
+  }
+
+  body {
+    background: transparent;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .header-change {
+    display: block;
+    position: absolute;
+    top: 0.5vh;
+    right: 5vw;
+    color: white;
+    font-size: 1rem;
+  }
+
+  main {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+
+.link-exchange {
+  color: white;
+  font: normal 1.5rem bolder;
+  margin-left: 0.6rem;
+}
+
+.link-list {
+  display: flex;
+
+  & a {
+    padding: 0.6rem;
+    color: white;
+    font: normal 1rem bold;
+  }
+}
