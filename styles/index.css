@@ -4,13 +4,7 @@
 /*导入全局样式*/
 @import url(global.css);
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-/* header目录 */
+/* nav目录 */
 @keyframes fade-in-up {
   from {
     transform: translateY(48px);
@@ -23,47 +17,48 @@ body {
   }
 }
 
-header {
+nav {
   animation: fade-in-up 1s ease;
 }
 
-.header {
+.nav {
   display: flex;
-  justify-content: right;
+  justify-content: end;
   align-items: center;
-  height: 10vmin;
+  height: 10rem;
   width: 100%;
   position: fixed;
   top: 0;
   right: 0;
   background-color: transparent;
-  color: white;
-  padding-right: 10vw;
-
-  & ul {
-    display: flex;
-    flex-direction: row;
-
-    & :not(:first-child) a:hover {
-      color: var(--blue);
-    }
-    
-    & :first-child a {
-      color: var(--pink);
-    }
-    
-    & li {
-      margin-right: 5vmin;
-      
-      & a {
-        color: white;
-        padding: 1vmin;
-      }
-    }
-  }
+  padding-right: 10rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 
-.header-change {
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  color: var(--pink);
+  padding: 1rem;
+}
+
+.nav ul li a:hover,
+.nav ul li a:active {
+  color: var(--blue);
+}
+
+.nav ul li:first-child a {
+  color: var(--blue);
+}
+
+.nav-change {
   display: none;
   position: sticky;
   background-color: transparent;
@@ -78,50 +73,32 @@ header {
 
 /* main样式 */
 main {
-  height: 100%;
   display: flex;
-  background-image: linear-gradient(#00000088, #00000088), url(../images/Elysia2.png);
+  height: 100vh;
+  background-image: linear-gradient(#00000088, #00000088),
+    url(../images/Elysia2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-@media (max-width: 1080px) {
-  main {
-    background-position: center;
-  }
-}
-
 .main-content {
+  margin: auto;
+  text-align: center;
   animation: fade-in-up 1s ease;
-  & h1 {
-    color: #fff0f6;
-    font-size: 2.825rem;
-    text-transform: capitalize;
-    font-style: normal;
-    margin-bottom: 10px;
-  }
-  
-  & p {
-    color: #ffdeeb;
-    font-size: 1.25rem;
-    text-transform: capitalize;
-    margin-bottom: 60px;
-  }
-  
-
 }
-/* 服务器列表 */
-.server {
-  float: right;
-  width: 230px;
-  height: 365px;
-  background-color: #c0ffc9;
-  margin-top: 20px;
 
-  & h3 {
-    line-height: 48px;
-    background-color: #fff6a6;
-    text-align: center;
-  }
+.main-content h1 {
+  color: #fff0f6;
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  color: #ffdeeb;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  margin-bottom: 6rem;
 }

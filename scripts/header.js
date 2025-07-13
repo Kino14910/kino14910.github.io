@@ -1,21 +1,27 @@
-const header = document.querySelector('header');
-const changedHeader = document.querySelector('.header-change')
-let lastScrollY = window.scrollY; // 记录上次滚动的位置
+'use strict'
+const active = document.querySelector('.active')
+const navList = document.querySelector('.nav-list')
+const main = document.querySelector('main')
+
+navList.addEventListener('click', function (event) {
+  if (event.target.tagName === 'a') {
+    const activeLink = navList.querySelector('.active')
+    if (activeLink) {
+      activeLink.classList.remove('active')
+    }
+    event.target.classList.add('active')
+  }
+})
+
+const header = document.querySelector('.header')
+const stickyThreshold = 100 // 设定滚动的阈值，超过 100px 才变为 sticky
 
 window.addEventListener('scroll', () => {
-    // 自定义的滚动距离，可以根据需要调整
-    const scrollDistance = 100;
-
-    if (window.scrollY > lastScrollY && window.scrollY > scrollDistance) {
-        // 向下滚动，超过自定义距离时隐藏 header
-        header.style.transform = 'translateY(-100%)';
-        changedHeader.style.display = 'block'
-    } else {
-        // 向上滚动时显示 header
-        header.style.transform = 'translateY(0)';
-        changedHeader.style.display = 'none'
-
-    }
-    
-    lastScrollY = window.scrollY; // 更新上次滚动的位置
-});
+  if (window.scrollY > stickyThreshold) {
+    // 当滚动超过阈值时，添加 sticky 类
+    header.classList.add('sticky')
+  } else {
+    // 当滚动小于阈值时，移除 sticky 类
+    header.classList.remove('sticky')
+  }
+})

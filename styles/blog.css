@@ -9,7 +9,7 @@ body {
   background-image: url(../images/nekopara.jpg);
   background-size: cover;
   background-attachment: fixed;
-  color: #fff;
+  color: white;
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
   height: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
     padding: 0 0;
   }
@@ -46,14 +46,14 @@ section {
     'bottom bottom' /4vmax 1fr;
   grid-gap: 0 1vmin;
   /* transition: transform, box-shadow 0.5s; */
-  
+
   & img {
     display: block;
     height: 4vmax;
     width: 4vmax;
     grid-area: head;
   }
-  
+
   &:hover {
     outline: 4px solid var(--blue);
     transform: scale(1.01);
@@ -65,12 +65,12 @@ section {
     font-size: 0.8rem;
     align-self: stretch;
   }
-  
+
   & .bottom {
     grid-area: bottom;
     display: flex;
     justify-content: end;
-    
+
     & .bottom-item {
       font-size: small;
       margin-right: 1vw;
@@ -91,33 +91,31 @@ section {
     border: #00000022 solid 1px;
     background-color: #00000011;
     border-radius: 1vmin;
-  
+
     & p {
       display: block;
       margin: 1vmin;
     }
-  
+
     & span {
       display: inline-block;
       margin: 0 5px;
-      color: #0088ffcc;
+      color: #4dacff;
       cursor: pointer;
     }
-    
   }
 
   & article {
     padding: 1vmin;
     grid-area: article;
-    
+
     & iframe {
-    margin-top: 2vh;
+      margin-top: 2vh;
     }
   }
-  
+
   & .nickname {
     grid-area: name;
     align-self: stretch;
   }
 }
-
