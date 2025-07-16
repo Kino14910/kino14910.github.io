@@ -1,115 +1,115 @@
 /* 统一顶栏样式 */
 header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  margin: auto;
-  z-index: 1;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    margin: auto;
+    z-index: 1;
 }
 
 .header {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  height: 8rem;
-  width: 100%;
-  background-color: #171d25;
-  color: white;
-  padding-right: 10rem;
-  font-size: 1.8rem;
-  line-height: 1.8;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 8rem;
+    width: 100%;
+    background-color: #171d25;
+    color: white;
+    padding-right: 10rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
 }
 
 .header ul {
-  display: flex;
-  gap: 6rem;
+    display: flex;
+    gap: 6rem;
 }
 
 .header ul li a {
-  color: white;
-  padding: 1rem;
-  transition: color 0.3s;
+    color: white;
+    padding: 1rem;
+    transition: color 0.3s;
 }
 
 .header ul li a:hover {
-  color: var(--blue);
+    color: var(--blue);
 }
 
 .header ul li .active {
-  color: var(--pink2);
-  position: relative;
+    color: var(--pink2);
+    position: relative;
 }
 
 .header ul li .active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--pink2);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--pink2);
 }
 
 .header-change {
-  display: none;
-  background-color: transparent;
-  position: fixed;
-  top: 10rem;
-  right: 10rem;
-  z-index: 1001;
+    display: none;
+    background-color: transparent;
+    position: fixed;
+    top: 10rem;
+    right: 10rem;
+    z-index: 1001;
 }
 
 /* footer样式 */
 footer {
-  padding: 1rem 2rem;
-  width: 100%;
-  background-color: transparent;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: transparent;
 }
 
 @media (max-width: 900px) {
-  header {
-    position: relative;
-  }
+    header {
+        position: relative;
+    }
 
-  body {
-    background: transparent;
-  }
+    body {
+        background: transparent;
+    }
 
-  .header {
-    display: none;
-  }
+    .header {
+        display: none;
+    }
 
-  .header-change {
-    display: block;
-    position: absolute;
-    top: 0.5rem;
-    right: 5rem;
-    color: white;
-    font-size: 2rem;
-  }
+    .header-change {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        right: 5rem;
+        color: white;
+        font-size: 2rem;
+    }
 
-  main {
-    margin: 0;
-    border-radius: 0;
-  }
+    main {
+        margin: 0;
+        border-radius: 0;
+    }
 
-  footer {
-    display: none;
-  }
+    footer {
+        display: none;
+    }
 }
 
 .link-exchange {
-  color: white;
-  font: normal 1.5rem bolder;
-  margin-left: 0.6rem;
+    color: white;
+    font: normal 1.5rem bolder;
+    margin-left: 0.6rem;
 }
 
 .link-list {
-  display: flex;
+    display: flex;
 }
 
 .link-list a {
-  padding: 0.6rem;
-  color: white;
-  font: normal 1rem bold;
+    padding: 0.6rem;
+    color: white;
+    font: normal 1rem bold;
 }

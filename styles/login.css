@@ -3,105 +3,105 @@
 
 /* 登录框整体样式 */
 .box {
-  display: flex;
-  min-height: 50rem;
-  width: 100%;
-  max-width: 80rem;
-  margin: 5rem auto;
-  background-color: var(--bg);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    min-height: 50rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: 5rem auto;
+    background-color: var(--bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
 }
 
 .left {
-  flex: 1;
-  background: url('../images/login.png') center/cover no-repeat;
-  position: relative;
+    flex: 1;
+    background: url("../images/login.png") center/cover no-repeat;
+    position: relative;
 }
 
 .right {
-  flex: 1;
-  padding: 6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    flex: 1;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .right h4 {
-  color: var(--pink2);
-  font-size: 3.2rem;
-  margin-bottom: 3rem;
-  text-align: center;
+    color: var(--pink2);
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .right form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .account {
-  width: 100%;
-  padding: 1.5rem;
-  border: 1px solid var(--pink);
-  border-radius: 0.5rem;
-  color: white;
-  font-size: 1.6rem;
-  transition: all 0.3s;
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--pink);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.6rem;
+    transition: all 0.3s;
 }
 
 .account:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 0.2rem rgba(179, 234, 255, 0.3);
+    border-color: var(--blue);
+    box-shadow: 0 0 0 0.2rem rgba(179, 234, 255, 0.3);
 }
 
 .submit {
-  background-color: var(--pink);
-  color: var(--bg);
-  border: none;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
+    background-color: var(--pink);
+    color: var(--bg);
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .submit:hover {
-  background-color: var(--pink2);
-  transform: translateY(-0.2rem);
+    background-color: var(--pink2);
+    transform: translateY(-0.2rem);
 }
 
 /* 功能链接样式 */
 .fn {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
 .fn a {
-  color: var(--blue);
-  font-size: 1.4rem;
-  transition: all 0.3s;
+    color: var(--blue);
+    font-size: 1.4rem;
+    transition: all 0.3s;
 }
 
 .fn a:hover {
-  color: var(--pink);
+    color: var(--pink);
 }
 
 /* 响应式设计 */
 @media (max-width: 900px) {
-  .box {
-    flex-direction: column;
-    height: auto;
-  }
+    .box {
+        flex-direction: column;
+        height: auto;
+    }
 
-  .left {
-    height: 30rem;
-  }
+    .left {
+        height: 30rem;
+    }
 
-  .right {
-    padding: 4rem 2rem;
-  }
+    .right {
+        padding: 4rem 2rem;
+    }
 }

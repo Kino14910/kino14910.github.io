@@ -6,99 +6,99 @@
 
 /* nav目录 */
 @keyframes fade-in-up {
-  from {
-    transform: translateY(48px);
-    opacity: 0;
-  }
+    from {
+        transform: translateY(48px);
+        opacity: 0;
+    }
 
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 nav {
-  animation: fade-in-up 1s ease;
+    animation: fade-in-up 1s ease;
 }
 
 .nav {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  height: 10rem;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  padding-right: 10rem;
-  font-size: 1.8rem;
-  line-height: 1.8;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    padding-right: 10rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
 }
 
 .nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
 
 .nav a:link,
 .nav a:visited {
-  color: var(--pink);
-  padding: 1rem;
+    color: var(--pink);
+    padding: 1rem;
 }
 
 .nav ul li a:hover,
 .nav ul li a:active {
-  color: var(--blue);
+    color: var(--blue);
 }
 
 .nav ul li:first-child a {
-  color: var(--blue);
+    color: var(--blue);
 }
 
 .nav-change {
-  display: none;
-  position: sticky;
-  background-color: transparent;
-  transition: background-color 0.5s ease-in-out;
+    display: none;
+    position: sticky;
+    background-color: transparent;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .symbols {
-  color: white;
-  font-size: large;
-  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 48;
+    color: white;
+    font-size: large;
+    font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
 }
 
 /* main样式 */
 main {
-  display: flex;
-  height: 100vh;
-  background-image: linear-gradient(#00000088, #00000088),
-    url(../images/Elysia2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    display: flex;
+    height: 100vh;
+    background-image: linear-gradient(#00000088, #00000088),
+        url(../images/Elysia2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .main-content {
-  margin: auto;
-  text-align: center;
-  animation: fade-in-up 1s ease;
+    margin: auto;
+    text-align: center;
+    animation: fade-in-up 1s ease;
 }
 
 .main-content h1 {
-  color: #fff0f6;
-  font-size: 5rem;
-  text-transform: capitalize;
-  font-style: normal;
-  margin-bottom: 10px;
+    color: #fff0f6;
+    font-size: 5rem;
+    text-transform: capitalize;
+    font-style: normal;
+    margin-bottom: 10px;
 }
 
 .main-content p {
-  color: #ffdeeb;
-  font-size: 2.25rem;
-  text-transform: capitalize;
-  margin-bottom: 6rem;
+    color: #ffdeeb;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    margin-bottom: 6rem;
 }

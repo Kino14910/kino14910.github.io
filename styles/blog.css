@@ -6,116 +6,133 @@
 @import url(common.css);
 
 body {
-  background-image: url(../images/nekopara.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
+    background-image: url(../images/nekopara.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
 .container {
-  padding: 10vh 25vw;
-  height: auto;
+    padding: 10vh 25vw;
+    height: auto;
 }
 
 @media (max-width: 900px) {
-  .container {
-    padding: 0 0;
-  }
+    .container {
+        padding: 0 0;
+    }
 }
 
 /* main样式 */
 main {
-  border-radius: 3rem;
-  padding: 5vh 0;
-  background-image: linear-gradient(#222330ed, #222330ed);
+    border-radius: 3rem;
+    padding: 5vh 0;
+    background-image: linear-gradient(#222330ed, #222330ed);
 }
 
-section {
-  margin: 2vw;
-  background-color: #141520ed;
-  border-radius: 1vmin;
-  border-bottom: #333 3px double;
-  backdrop-filter: blur(5px);
-  padding: 3vmin;
-  display: grid;
-  grid-template:
-    'head name' 2vmax
-    'head time' 2vmax
-    'article article'
-    'comment comment'
-    'bottom bottom' /4vmax 1fr;
-  grid-gap: 0 1vmin;
-  /* transition: transform, box-shadow 0.5s; */
-
-  & img {
-    display: block;
-    height: 4vmax;
-    width: 4vmax;
-    grid-area: head;
-  }
-
-  &:hover {
-    outline: 4px solid var(--blue);
-    transform: scale(1.01);
-  }
-
-  & time {
-    grid-area: time;
-    color: gray;
-    font-size: 0.8rem;
-    align-self: stretch;
-  }
-
-  & .bottom {
-    grid-area: bottom;
-    display: flex;
-    justify-content: end;
-
-    & .bottom-item {
-      font-size: small;
-      margin-right: 1vw;
-
-      & span {
-        color: whitesmoke;
-        font-size: 22px;
-
-        &:hover {
-          color: skyblue;
-        }
-      }
-    }
-  }
-
-  & .comment {
-    grid-area: comment;
-    border: #00000022 solid 1px;
-    background-color: #00000011;
+article {
+    margin: 2vw;
+    background-color: #141520ed;
     border-radius: 1vmin;
+    border-bottom: #333 3px double;
+    backdrop-filter: blur(5px);
+    padding: 3vmin;
+    display: grid;
+    grid-template:
+        "head name" 2vmax
+        "head time" 2vmax
+        "post-content post-content"
+        "comment comment"
+        "bottom bottom" /4vmax 1fr;
+    grid-gap: 0 1vmin;
+    /* transition: transform, box-shadow 0.5s; */
 
-    & p {
-      display: block;
-      margin: 1vmin;
+    &>.avatar>img {
+        display: block;
+        height: 4vmax;
+        width: 4vmax;
+        grid-area: head;
     }
 
-    & span {
-      display: inline-block;
-      margin: 0 5px;
-      color: #4dacff;
-      cursor: pointer;
+    &:hover {
+        outline: 4px solid var(--blue);
+        transform: scale(1.01);
     }
-  }
 
-  & article {
-    padding: 1vmin;
-    grid-area: article;
-
-    & iframe {
-      margin-top: 2vh;
+    & time {
+        grid-area: time;
+        color: gray;
+        font-size: 1.2rem;
+        align-self: stretch;
     }
-  }
 
-  & .nickname {
-    grid-area: name;
-    align-self: stretch;
-  }
+    & .bottom {
+        grid-area: bottom;
+        display: flex;
+        justify-content: end;
+
+        & .bottom-item {
+            font-size: small;
+            margin-right: 1vw;
+
+            &>.interaction-bar {
+                cursor: pointer;
+
+                &>.symbols {
+                    color: whitesmoke;
+                    font-size: 22px;
+
+                    &:hover {
+                        color: skyblue;
+                    }
+                }
+            }
+        }
+    }
+
+    & .comment {
+        grid-area: comment;
+        border: #00000022 solid 1px;
+        background-color: #00000011;
+        border-radius: 1vmin;
+
+        & p {
+            display: block;
+            line-height: 1.5;
+            margin-left: 5px;
+        }
+
+        & span {
+            display: inline-block;
+            color: var(--link-blue);
+            cursor: pointer;
+
+            &.commenter {
+                margin-right: 5px;
+            }
+
+            &.mention {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    & .post-content {
+        padding: 1vmin;
+        grid-area: post-content;
+
+        & iframe {
+            margin-top: 2vh;
+        }
+    }
+
+    & .nickname {
+        grid-area: name;
+        align-self: stretch;
+    }
+}
+
+.grid-center {
+    justify-content: center;
+    align-items: center;
 }
