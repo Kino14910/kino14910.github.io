@@ -1,14 +1,10 @@
 /* 导入字体图标 */
 @import url(../symbols/outlined/index.css);
-@import url(../symbols/symbols.css);
+@import url(../symbols/font.css);
 /*导入全局样式*/
 @import url(global.css);
 @import url(common.css);
 
-footer {
-    position: absolute;
-    bottom: 0;
-}
 
 /*中间大导航栏*/
 nav {
@@ -18,7 +14,7 @@ nav {
     align-items: center;
 }
 
-@media (min-width: 960px) {
+@media screen and (min-width: 56.25em) {
     nav {
         position: fixed;
         top: 50%;
@@ -32,7 +28,7 @@ nav div {
     height: 300px;
     width: 180px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     transition: ease all 0.2s;
 }
@@ -46,7 +42,7 @@ nav img {
     width: auto;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 56.25em) {
     .container {
         padding: 15vh 0;
         height: auto;

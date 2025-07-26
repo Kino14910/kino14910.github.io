@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 56.25em) {
     .container {
         margin-top: 20%;
         width: 95%;
@@ -20,26 +20,25 @@
     gap: 1rem;
     padding: 0;
     list-style: none;
-}
+    & > a {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #bbbfcd;
+        padding: 1rem;
+        background-color: #111923;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
 
-.grid > a {
-    display: block;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    color: #bbbfcd;
-    padding: 1rem;
-    background-color: #111923;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-}
-
-.grid > a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    background-color: #1a2432;
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background-color: #ffffff11;
+        }
+    }
 }
 
 .container > ul > li > p {

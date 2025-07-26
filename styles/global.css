@@ -31,7 +31,7 @@ html {
   color-scheme: dark;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
   }

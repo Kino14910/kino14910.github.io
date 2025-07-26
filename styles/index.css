@@ -1,6 +1,6 @@
 /* 导入字体图标 */
 @import url(../symbols/outlined/index.css);
-@import url(../symbols/symbols.css);
+@import url(../symbols/font.css);
 /*导入全局样式*/
 @import url(global.css);
 
@@ -17,10 +17,6 @@
     }
 }
 
-nav {
-    animation: fade-in-up 1s ease;
-}
-
 .nav {
     display: flex;
     justify-content: end;
@@ -34,28 +30,39 @@ nav {
     padding-right: 10rem;
     font-size: 1.8rem;
     line-height: 1.8;
-}
+    animation: fade-in-up 1s ease;
 
-.nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-}
+    & > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
 
-.nav a:link,
-.nav a:visited {
-    color: var(--pink);
-    padding: 1rem;
-}
+        & > li {
+            & > a{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            
+                &:link,
+                &:visited {
+                    color: var(--pink);
+                    padding: 1rem;
+                }
 
-.nav ul li a:hover,
-.nav ul li a:active {
-    color: var(--blue);
-}
-
-.nav ul li:first-child a {
-    color: var(--blue);
+                &:hover,
+                &:active {
+                    color: var(--blue);
+                }
+            }
+            
+            &:first-child > a {
+                color: var(--blue);
+            } 
+            
+        }
+        
+    }
 }
 
 .nav-change {

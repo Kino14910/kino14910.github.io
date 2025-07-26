@@ -91,7 +91,7 @@
 }
 
 /* 响应式设计 */
-@media (max-width: 900px) {
+@media screen and (max-width: 56.25em) {
     .box {
         flex-direction: column;
         height: auto;

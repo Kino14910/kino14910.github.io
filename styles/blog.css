@@ -1,6 +1,6 @@
 /* 导入字体图标 */
 @import url(../symbols/outlined/index.css);
-@import url(../symbols/symbols.css);
+@import url(../symbols/font.css);
 /*导入全局样式*/
 @import url(global.css);
 @import url(common.css);
@@ -17,7 +17,7 @@ body {
     height: auto;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 56.25em) {
     .container {
         padding: 0 0;
     }
@@ -34,7 +34,7 @@ article {
     margin: 2vw;
     background-color: #141520ed;
     border-radius: 1vmin;
-    border-bottom: #333 3px double;
+    border-interaction-bar: #333 3px double;
     backdrop-filter: blur(5px);
     padding: 3vmin;
     display: grid;
@@ -43,7 +43,7 @@ article {
         "head time" 2vmax
         "post-content post-content"
         "comment comment"
-        "bottom bottom" /4vmax 1fr;
+        "interaction-bar interaction-bar" /4vmax 1fr;
     grid-gap: 0 1vmin;
     /* transition: transform, box-shadow 0.5s; */
 
@@ -62,23 +62,23 @@ article {
     & time {
         grid-area: time;
         color: gray;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         align-self: stretch;
     }
 
-    & .bottom {
-        grid-area: bottom;
+    & .interaction-bar {
+        grid-area: interaction-bar;
         display: flex;
         justify-content: end;
 
-        & .bottom-item {
+        & .interaction-bar-item {
             font-size: small;
             margin-right: 1vw;
 
-            &>.interaction-bar {
+            &>.interaction {
                 cursor: pointer;
 
-                &>.symbols {
+                &>.material-symbols-rounded {
                     color: whitesmoke;
                     font-size: 22px;
 
@@ -91,12 +91,13 @@ article {
     }
 
     & .comment {
+        display: block;
         grid-area: comment;
         border: #00000022 solid 1px;
         background-color: #00000011;
         border-radius: 1vmin;
 
-        & p {
+        & li {
             display: block;
             line-height: 1.5;
             margin-left: 5px;
